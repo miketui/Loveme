@@ -13,7 +13,7 @@ from pathlib import Path
 
 def validate_file_structure():
     """Check that all expected files exist"""
-    text_dir = Path("/root/repo/OEBPS/text")
+    text_dir = Path("/home/runner/work/Loveme/Loveme/OEBPS/text")
     
     actual_files = list(text_dir.glob("*.xhtml"))
     actual_names = [f.name for f in actual_files]
@@ -47,7 +47,7 @@ def validate_xhtml_basic(file_path):
         
         checks = {
             'xml_declaration': content.startswith('<?xml'),
-            'doctype_present': 'DOCTYPE html PUBLIC' in content,
+            'doctype_present': '<!DOCTYPE html>' in content,
             'xhtml_namespace': 'http://www.w3.org/1999/xhtml' in content,
             'title_element': '<title>' in content,
             'css_link': 'stylesheet' in content,
@@ -93,7 +93,7 @@ def validate_content_sections(file_path):
 
 def validate_css_integration():
     """Check CSS file exists and has required classes"""
-    css_file = Path("/root/repo/OEBPS/styles/style.css")
+    css_file = Path("/home/runner/work/Loveme/Loveme/OEBPS/styles/style.css")
     
     if not css_file.exists():
         return False, "CSS file not found at OEBPS/styles/style.css"
@@ -139,7 +139,7 @@ def validate_css_integration():
 
 def check_sample_files():
     """Check a few sample files in detail"""
-    text_dir = Path("/root/repo/OEBPS/text")
+    text_dir = Path("/home/runner/work/Loveme/Loveme/OEBPS/text")
     sample_files = []
     
     # Get a representative sample
@@ -253,7 +253,7 @@ def main():
     print(f"\n4. QUICK VALIDATION OF ALL FILES")
     print("-" * 40)
     
-    text_dir = Path("/root/repo/OEBPS/text")
+    text_dir = Path("/home/runner/work/Loveme/Loveme/OEBPS/text")
     all_files = list(text_dir.glob("*.xhtml"))
     
     file_issues = 0
