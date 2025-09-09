@@ -1,0 +1,389 @@
+# Complete EPUB Chapter Revision Guide & Templates
+## Professional EPUB-Ready Chapter Formatting with ACISS Design System
+
+### Project Overview
+This comprehensive guide provides everything needed to transform 20 XHTML files (16 chapters + 4 part dividers) in the `OEBPS/text/` directory into publication-ready, bestseller-quality EPUB content. Every file will maintain 100% content fidelity while applying the ACISS design system consistently.
+
+## File Inventory for Revision (20 Total Files)
+
+### Chapter Files (16 files):
+1. `9-chapter-i-unveiling-your-creative-odyssey.xhtml`
+2. `10-chapter-ii-refining-your-creative-toolkit.xhtml`
+3. `11-chapter-iii-reigniting-your-creative-fire.xhtml`
+4. `13-chapter-iv-the-art-of-networking-in-freelance-hairstyling.xhtml`
+5. `14-chapter-v-cultivating-creative-excellence-through-mentorship.xhtml`
+6. `15-chapter-vi-mastering-the-business-of-hairstyling.xhtml`
+7. `16-chapter-vii-embracing-wellness-and-self-care.xhtml`
+8. `17-chapter-viii-advancing-skills-through-continuous-education.xhtml`
+9. `19-chapter-ix-stepping-into-leadership.xhtml`
+10. `20-chapter-x-crafting-enduring-legacies.xhtml`
+11. `21-chapter-xi-advanced-digital-strategies-for-freelance-hairstylists.xhtml`
+12. `22-chapter-xii-financial-wisdom-building-sustainable-ventures.xhtml`
+13. `23-chapter-xiii-embracing-ethics-and-sustainability-in-hairstyling.xhtml`
+14. `25-chapter-xiv-the-impact-of-ai-on-the-beauty-industry.xhtml`
+15. `26-chapter-xv-cultivating-resilience-and-well-being-in-hairstyling.xhtml`
+16. `27-chapter-xvi-tresses-and-textures-embracing-diversity-in-hairstyling.xhtml`
+
+### Part Divider Files (4 files):
+1. `8-Part-I-Foundations-of-Creative-Hairstyling.xhtml`
+2. `12-Part-II-Building-Your-Professional-Practice.xhtml`
+3. `18-Part-III-Advanced-Business-Strategies.xhtml`
+4. `24-Part-IV-Future-Focused-Growth.xhtml`
+
+## ACISS Design System Specifications
+
+### Complete XHTML Document Template
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Chapter [ROMAN] - [TITLE]</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" type="text/css" href="../styles/fonts.css"/>
+    <link rel="stylesheet" type="text/css" href="../styles/style.css"/>
+</head>
+<body class="chapter-page">
+
+<!-- PAGE 1: TITLE PAGE -->
+<section class="chap-title">
+    <!-- Roman numeral with brushstroke background -->
+    <div class="chapter-number-container">
+        <div class="chapter-number-brush">
+            <img class="brushstroke-img" src="../images/brushstroke.JPEG" alt="" />
+            <div class="chapter-number-text">[ROMAN_NUMERAL]</div>
+        </div>
+    </div>
+    
+    <!-- Vertical title stack with accent bar -->
+    <div class="chapter-title-container">
+        <div class="title-stack">
+            <div class="title-bar"></div>
+            <div class="title-lines">
+                <div class="title-line">[TITLE_LINE_1]</div>
+                <div class="title-line">[TITLE_LINE_2]</div>
+                <div class="title-line">[TITLE_LINE_3]</div>
+                <!-- Additional title lines as needed -->
+            </div>
+        </div>
+    </div>
+    
+    <!-- Bible quote in pill container -->
+    <div class="bible-quote-container">
+        <div class="bible-quote-text">[BIBLE_QUOTE_TEXT]</div>
+        <div class="bible-quote-reference">[BIBLE_REFERENCE]</div>
+    </div>
+    
+    <!-- Introduction -->
+    <div class="introduction-heading">Introduction</div>
+    <p class="dropcap-first-letter">[INTRODUCTION_PARAGRAPH]</p>
+</section>
+
+<!-- PAGE BREAK -->
+<div class="page-break"></div>
+
+<!-- PAGE 2-4: BODY CONTENT -->
+<section class="chap-body">
+    <h2 class="section-heading">[SECTION_TITLE]</h2>
+    <!-- ALL ORIGINAL CONTENT PRESERVED WORD-FOR-WORD -->
+    <!-- Including: case studies, personal stories, implementation steps -->
+    <!-- All paragraphs, lists, quotes, and anecdotes maintained exactly -->
+</section>
+
+<!-- PAGE BREAK -->
+<div class="page-break"></div>
+
+<!-- PAGE 5: ENDNOTES -->
+<section class="endnotes">
+    <h2 class="endnotes-title">Endnotes</h2>
+    <!-- ALL FOOTNOTES AND REFERENCES PRESERVED -->
+    <div class="footnote">
+        <span class="footnote-number">1.</span>
+        <span class="footnote-text">[FOOTNOTE_TEXT]</span>
+    </div>
+    <!-- Additional footnotes as needed -->
+</section>
+
+<!-- PAGE BREAK -->
+<div class="page-break"></div>
+
+<!-- PAGE 6: QUIZ AND WORKSHEET -->
+<section class="quiz-container">
+    <h2 class="quiz-title">Chapter Quiz</h2>
+    <p class="text-center">Choose the single best answer</p>
+    
+    <div class="quiz-question">
+        <p class="question-text">1. [QUESTION_TEXT]</p>
+        <div class="quiz-options">
+            <div class="option">A) [OPTION_A]</div>
+            <div class="option">B) [OPTION_B]</div>
+            <div class="option">C) [OPTION_C]</div>
+            <div class="option">D) [OPTION_D]</div>
+        </div>
+    </div>
+    <!-- Maximum 4 questions per chapter -->
+</section>
+
+<section class="worksheet">
+    <h2 class="text-center">Chapter Worksheet</h2>
+    <!-- Interactive elements formatted for static EPUB -->
+    <div class="worksheet-item">
+        <p class="worksheet-prompt">[WORKSHEET_CONTENT]</p>
+        <div class="worksheet-space"></div>
+    </div>
+</section>
+
+<!-- PAGE BREAK -->
+<div class="page-break"></div>
+
+<!-- CLOSING IMAGE SECTION -->
+<section class="closing">
+    <div class="closing-image-container">
+        <img src="../images/[CLOSING_IMAGE].jpg" alt="[ALT_TEXT]" class="closing-image"/>
+    </div>
+</section>
+
+</body>
+</html>
+```
+
+### Part Divider Template
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Part [NUMBER] - [TITLE]</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" type="text/css" href="../styles/fonts.css"/>
+    <link rel="stylesheet" type="text/css" href="../styles/style.css"/>
+</head>
+<body class="part-divider-page">
+
+<section class="part-divider">
+    <div class="part-number">[PART_NUMBER]</div>
+    <h1 class="part-title">[PART_TITLE]</h1>
+    <div class="part-description">
+        <!-- ALL ORIGINAL DESCRIPTIVE CONTENT PRESERVED -->
+    </div>
+</section>
+
+</body>
+</html>
+```
+
+## Critical CSS Classes for ACISS Design System
+
+### Chapter Page Classes
+- `chap-title` - Title page container
+- `chapter-number-container` - Roman numeral section wrapper
+- `chapter-number-brush` - Brushstroke background container
+- `brushstroke-img` - Brushstroke background image
+- `chapter-number-text` - Roman numeral text styling
+- `chapter-title-container` - Title section wrapper
+- `title-stack` - Vertical title layout container
+- `title-bar` - Accent bar beside title
+- `title-lines` - Container for stacked title lines
+- `title-line` - Individual title line styling
+- `bible-quote-container` - Pill-shaped quote container
+- `bible-quote-text` - Quote text styling
+- `bible-quote-reference` - Citation styling
+- `introduction-heading` - "Introduction" heading style
+- `dropcap-first-letter` - First letter with accent background
+- `chap-body` - Main content sections
+- `section-heading` - Body section headings
+- `endnotes` - Reference section container
+- `endnotes-title` - Endnotes section heading
+- `footnote` - Individual footnote container
+- `footnote-number` - Footnote number styling
+- `footnote-text` - Footnote content styling
+- `quiz-container` - Quiz section wrapper
+- `quiz-title` - Quiz heading style
+- `quiz-question` - Individual question container
+- `question-text` - Question text styling
+- `quiz-options` - Options container
+- `option` - Individual option styling
+- `worksheet` - Worksheet section container
+- `worksheet-item` - Worksheet element container
+- `worksheet-prompt` - Worksheet question/prompt
+- `worksheet-space` - Answer space formatting
+- `closing` - Final section container
+- `closing-image-container` - Image wrapper
+- `closing-image` - Closing image styling
+- `page-break` - Page break formatting
+- `text-center` - Center alignment utility
+
+### Part Divider Classes
+- `part-divider` - Part page container
+- `part-number` - Part number styling
+- `part-title` - Part title styling
+- `part-description` - Descriptive content styling
+
+## Chapter Title Parsing Rules
+
+### Title Line Breaking Strategy
+Break long chapter titles into vertical lines for visual impact:
+
+**Example: "MASTERING THE BUSINESS OF HAIRSTYLING"**
+```xml
+<div class="title-line">MASTERING</div>
+<div class="title-line">THE</div>
+<div class="title-line">BUSINESS</div>
+<div class="title-line">OF</div>
+<div class="title-line">HAIRSTYLING</div>
+```
+
+**Parsing Rules:**
+1. Break at natural word boundaries
+2. Aim for 3-6 lines maximum
+3. Maintain visual balance
+4. Keep related words together when possible
+5. Consider line length for mobile devices
+
+## Roman Numeral Reference
+```
+I = 1    II = 2    III = 3    IV = 4    V = 5    VI = 6    VII = 7    VIII = 8
+IX = 9   X = 10    XI = 11    XII = 12   XIII = 13   XIV = 14   XV = 15   XVI = 16
+```
+
+## Content Preservation Requirements
+
+### 100% Fidelity Checklist
+- ✅ **Every Word Preserved**: No summarization or paraphrasing
+- ✅ **All Footnotes**: Complete citations and references maintained
+- ✅ **Case Studies**: Personal stories and examples kept intact
+- ✅ **Implementation Steps**: Action items and guidance preserved
+- ✅ **Quotes and Anecdotes**: Inspirational content maintained exactly
+- ✅ **Lists and Bullet Points**: All enumerated content preserved
+- ✅ **Emphasis and Formatting**: Bold, italics, and styling maintained
+- ✅ **Technical Terms**: Professional vocabulary kept precise
+- ✅ **Biblical References**: All spiritual content preserved accurately
+- ✅ **Personal Voice**: Author's unique tone and style maintained
+
+### Content Elements to Preserve
+1. **Opening Bible Quotes**: Exact text and attribution
+2. **Introduction Paragraphs**: Complete opening content with dropcap
+3. **Main Content Sections**: All body text word-for-word
+4. **Personal Stories**: Anecdotes and experiences intact
+5. **Case Studies**: Real-world examples preserved
+6. **Implementation Roadmaps**: Step-by-step guidance maintained
+7. **Professional Tips**: Actionable advice kept complete
+8. **Inspirational Content**: Motivational elements preserved
+9. **Technical Information**: Precise professional details
+10. **Footnotes and Citations**: All references maintained
+11. **Quiz Questions**: Educational content preserved
+12. **Worksheet Elements**: Interactive components maintained
+
+## Quality Assurance Protocol
+
+### Pre-Revision Checklist
+- [ ] Original content backed up
+- [ ] All 20 files identified and accessible
+- [ ] ACISS design system specifications confirmed
+- [ ] CSS class standards documented
+- [ ] Roman numeral mapping verified
+
+### During Revision Process
+- [ ] Content extracted and preserved completely
+- [ ] ACISS structure applied consistently
+- [ ] CSS classes corrected and standardized
+- [ ] Page breaks inserted properly
+- [ ] Image references verified
+- [ ] Bible quotes formatted in pill containers
+- [ ] Dropcap styling applied to introduction
+- [ ] Quiz and worksheet sections standardized
+
+### Post-Revision Validation
+- [ ] **XHTML 1.1 Validation**: All files pass W3C validation
+- [ ] **EPUB 3.0 Compliance**: EPUBCheck validation successful
+- [ ] **Content Verification**: Word-for-word accuracy confirmed
+- [ ] **Design Consistency**: ACISS standards applied uniformly
+- [ ] **Cross-Device Testing**: Compatibility verified on multiple platforms
+- [ ] **Accessibility Compliance**: WCAG 2.1 AA standards met
+- [ ] **Typography Review**: Professional presentation confirmed
+- [ ] **Image Optimization**: All graphics properly sized and compressed
+
+### Error Prevention Guidelines
+
+#### Common Issues to Avoid
+- ❌ **Content Truncation**: Never summarize or shorten original text
+- ❌ **Missing Elements**: Ensure all footnotes, quotes, and references included
+- ❌ **Inconsistent Styling**: Apply ACISS classes uniformly across all files
+- ❌ **Broken Structure**: Maintain proper 6-page chapter format
+- ❌ **Invalid XHTML**: Ensure all markup validates correctly
+- ❌ **Missing Page Breaks**: Insert breaks between each of 6 pages
+- ❌ **Image Path Errors**: Verify all image references are correct
+- ❌ **CSS Class Mistakes**: Use exact ACISS class names
+
+#### Best Practices
+- ✅ **Preserve Completely**: Every word from original maintained
+- ✅ **Test Thoroughly**: Validate on multiple devices and readers
+- ✅ **Document Changes**: Track all modifications made
+- ✅ **Backup Originals**: Keep copies of source files
+- ✅ **Validate Early**: Check XHTML structure during revision
+- ✅ **Review Content**: Ensure accuracy before finalizing
+- ✅ **Follow Standards**: Apply ACISS design system consistently
+- ✅ **Professional Quality**: Meet bestseller publication standards
+
+## File Naming Convention
+```
+[SEQUENCE]-[TYPE]-[ROMAN]-[TITLE-SLUG].xhtml
+
+Examples:
+10-chapter-ii-refining-your-creative-toolkit.xhtml
+15-chapter-vi-mastering-the-business-of-hairstyling.xhtml
+8-Part-I-Foundations-of-Creative-Hairstyling.xhtml
+```
+
+## Technical Standards
+
+### XHTML 1.1 Compliance
+- Valid XML structure with proper DOCTYPE
+- Correct namespace declarations
+- Properly nested and closed tags
+- Valid attribute usage
+- Character encoding specified
+
+### EPUB 3.0 Requirements
+- Proper manifest entries
+- Correct spine ordering
+- Valid navigation structure
+- Accessibility metadata
+- Cross-platform compatibility
+
+### Professional Publishing Standards
+- Consistent typography
+- Proper heading hierarchy
+- Professional image quality
+- Optimized file sizes
+- Error-free validation
+- Cross-device compatibility
+- Accessibility compliance
+
+## Visual Design Mock-Up Reference
+
+The ACISS design system follows this visual structure for chapter title pages:
+
+1. **TOP CENTER**: Roman numeral with brushstroke background (horizontally centered at top of page)
+2. **Left Side**: Vertical title stack with accent bar (left-aligned below Roman numeral)
+3. **Center**: Bible quote in pill-shaped container (centered on page)
+4. **Below**: "Introduction" heading (small caps, centered)
+5. **Bottom**: Introduction paragraph with dropcap first letter
+
+This creates a visually striking, professional layout that maintains consistency across all chapters while preserving every word of the original content.
+
+## Success Criteria
+
+### Final Deliverables
+- ✅ **20 Complete Files**: All chapters and part dividers revised
+- ✅ **100% Content Preservation**: No word changes or omissions
+- ✅ **ACISS Design Compliance**: Consistent professional styling
+- ✅ **Technical Validation**: EPUB 3.0 and XHTML 1.1 standards met
+- ✅ **Publication Quality**: Bestseller-worthy presentation
+- ✅ **Cross-Platform Compatibility**: Works on all e-readers and devices
+- ✅ **Professional Standards**: Ready for commercial publication
+- ✅ **Error-Free Output**: Zero validation or structural issues
+
+This comprehensive guide ensures every aspect of the EPUB revision process is covered, maintaining the highest standards of professional publishing while preserving the complete integrity of the original content.
