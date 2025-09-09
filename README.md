@@ -1,7 +1,7 @@
 # EPUB Chapter Revision Project - README
 
 ## Project Overview
-Revise **20 XHTML files** in the `OEBPS/text/` directory to achieve professional publication standards with the ACISS design system while maintaining 100% content fidelity.
+Revise **20 XHTML files** in the `Complete/OEBPS/text/` directory to achieve professional publication standards with the ACISS design system while maintaining 100% content fidelity.
 
 ## Files to Revise (20 Total)
 
@@ -276,7 +276,7 @@ PAGE 6: Quiz & Worksheet
 ## Resources Needed
 
 ### Input Files:
-- 20 original XHTML files from `OEBPS/text/` directory
+- 20 original XHTML files from `Complete/OEBPS/text/` directory
 - Access to `../images/brushstroke.JPEG`
 - CSS files: `../styles/fonts.css` and `../styles/style.css`
 

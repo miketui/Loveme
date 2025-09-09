@@ -15,7 +15,7 @@ import difflib
 
 def validate_file_structure():
     """Check that all expected files exist"""
-    text_dir = Path("/root/repo/OEBPS/text")
+    text_dir = Path("/root/repo/Complete/OEBPS/text")
     expected_files = []
     
     # Expected chapters (16 total)
@@ -123,7 +123,7 @@ def validate_content_sections(file_path):
 
 def validate_font_and_css_integration():
     """Check CSS and font integration"""
-    css_file = Path("/root/repo/OEBPS/styles/style.css")
+    css_file = Path("/root/repo/Complete/OEBPS/styles/style.css")
     
     if not css_file.exists():
         return False, "CSS file not found"
@@ -167,8 +167,8 @@ def validate_font_and_css_integration():
 
 def validate_image_references():
     """Check that image references are correct"""
-    text_dir = Path("/root/repo/OEBPS/text")
-    images_dir = Path("/root/repo/OEBPS/images")
+    text_dir = Path("/root/repo/Complete/OEBPS/text")
+    images_dir = Path("/root/repo/Complete/OEBPS/images")
     
     image_issues = []
     
@@ -209,7 +209,7 @@ def main():
     # 2. XHTML validation for each file
     print("\n2. XHTML STRUCTURE VALIDATION")
     print("-" * 30)
-    text_dir = Path("/root/repo/OEBPS/text")
+    text_dir = Path("/root/repo/Complete/OEBPS/text")
     xhtml_errors = 0
     
     for xhtml_file in sorted(text_dir.glob("*.xhtml")):
