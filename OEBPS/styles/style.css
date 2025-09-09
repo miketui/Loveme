@@ -187,7 +187,19 @@ li { margin-bottom: 0.5em; line-height: 1.5; }
    DROPCAP
    ============================= */
 .dropcap { float: left; font-family: 'Libre Baskerville', Georgia, 'Times New Roman', serif; font-weight: 700; font-size: 3.5em; line-height: 0.85; margin: 0.1em 0.18em 0 0; color: var(--accent-color); background: var(--dropcap-bg); padding: 0.15em 0.25em 0.05em 0.2em; border-radius: 0.3em; box-shadow: var(--shadow-light); text-transform: uppercase; }
-.dropcap-first-letter::first-letter { float: left; font-weight: 700; font-size: 3.5em; line-height: 0.85; margin: 0.1em 0.18em 0 0; color: var(--accent-color); background: var(--dropcap-bg); padding: 0.15em 0.25em 0.05em 0.2em; border-radius: 0.3em; box-shadow: var(--shadow-light); }
+.dropcap-first-letter::first-letter { 
+  float: left; 
+  font-family: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
+  font-weight: 700; 
+  font-size: 3.5em; 
+  line-height: 0.85; 
+  margin: 0.1em 0.18em 0 0; 
+  color: var(--accent-color); 
+  background: var(--dropcap-bg); 
+  padding: 0.15em 0.25em 0.05em 0.2em; 
+  border-radius: 0.3em; 
+  box-shadow: var(--shadow-light); 
+}
 
 /* =============================
    FRONT MATTER — TITLE PAGE
@@ -258,7 +270,13 @@ li { margin-bottom: 0.5em; line-height: 1.5; }
   max-width: 85%; text-align: center; font-style: italic; 
   color: var(--secondary-color); box-shadow: var(--shadow-light); 
 }
-.bible-quote-text { font-size: 1.05rem; margin-bottom: 0.3rem; }
+.bible-quote-text { 
+  font-family: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
+  font-style: italic; 
+  font-weight: 400;
+  font-size: 1.05rem; 
+  margin-bottom: 0.3rem; 
+}
 .bible-quote-reference { font-size: 0.9rem; color: var(--text-muted); font-weight: 700; font-style: normal; }
 .introduction-heading { font-size: 1rem; text-align: center; margin: 1.5rem 0 0.75rem 0; color: var(--primary-color); text-transform: uppercase; letter-spacing: 0.05em; }
 
@@ -330,7 +348,14 @@ img { max-width: 100%; height: auto; border-radius: 4px; box-shadow: var(--shado
 .image-quote { text-align: center; padding: 2rem; min-height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; }
 .image-quote figure { margin: 2rem 0; max-width: 90%; }
 .image-quote img { max-width: 100%; height: auto; border-radius: 8px; box-shadow: var(--shadow-medium); }
-.image-quote figcaption { font-family: 'Cinzel Decorative', serif; font-size: 0.9rem; color: var(--text-light); margin-top: 1rem; font-variant: small-caps; letter-spacing: 0.05em; }
+.image-quote figcaption { 
+  font-family: 'Montserrat', Arial, sans-serif; 
+  font-size: 0.9rem; 
+  color: var(--text-light); 
+  margin-top: 1rem; 
+  font-variant: small-caps; 
+  letter-spacing: 0.05em; 
+}
 
 /* =============================
    BLOCKQUOTES
