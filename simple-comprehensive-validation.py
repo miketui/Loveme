@@ -47,7 +47,7 @@ def validate_xhtml_basic(file_path):
         
         checks = {
             'xml_declaration': content.startswith('<?xml'),
-            'doctype_present': 'DOCTYPE html PUBLIC' in content,
+            'doctype_present': '<!DOCTYPE html>' in content,
             'xhtml_namespace': 'http://www.w3.org/1999/xhtml' in content,
             'title_element': '<title>' in content,
             'css_link': 'stylesheet' in content,
