@@ -2,7 +2,7 @@
 ## Professional EPUB-Ready Chapter Formatting with ACISS Design System
 
 ### Project Overview
-This comprehensive guide provides everything needed to transform 20 XHTML files (16 chapters + 4 part dividers) in the `OEBPS/text/` directory into publication-ready, bestseller-quality EPUB content. Every file will maintain 100% content fidelity while applying the ACISS design system consistently.
+This comprehensive guide provides everything needed to transform 20 XHTML files (16 chapters + 4 part dividers) in the `Complete/OEBPS/text/` directory into publication-ready, bestseller-quality EPUB content. Every file will maintain 100% content fidelity while applying the ACISS design system consistently.
 
 ## File Inventory for Revision (20 Total Files)
 
