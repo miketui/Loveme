@@ -168,6 +168,9 @@
   }
   
   .bible-quote-text {
+    font-family: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
+    font-style: italic;
+    font-weight: 400;
     font-size: 12pt;
     margin-bottom: 0.5em;
   }
@@ -199,7 +202,8 @@
     line-height: 48pt;
     padding-right: 8pt;
     padding-top: 4pt;
-    font-family: 'Cinzel Decorative', serif;
+    font-family: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
+    font-weight: 700;
     color: var(--print-accent);
   }
   

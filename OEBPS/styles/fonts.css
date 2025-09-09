@@ -51,10 +51,34 @@
   font-display: swap;
 }
 
-/* Assignments */
-body, p { font-family: 'Libre Baskerville', Georgia, 'Times New Roman', serif; }
-.chapter-title-word, .chapter-number-text, .part-title { font-family: 'Cinzel Decorative', Georgia, 'Times New Roman', serif; }
-.author, .publisher-info, .copyright, .metadata, .toc-page-number { font-family: 'Montserrat', Arial, 'Helvetica Neue', sans-serif; }
+/* Font Assignments - Corrected per requirements */
+/* Libre Baskerville - main body text (regular) */
+body, p { font-family: 'Libre Baskerville', Georgia, 'Times New Roman', serif; font-weight: 400; }
+
+/* Libre Baskerville - italics for bible quotes */
+.bible-quote-text, .bible-quote-container blockquote { 
+  font-family: 'Libre Baskerville', Georgia, 'Times New Roman', serif; 
+  font-style: italic; 
+  font-weight: 400; 
+}
+
+/* Libre Baskerville - bold for dropcap letters */
+.dropcap-first-letter p:first-child::first-letter,
+.dropcap-first-letter p:first-child strong:first-child {
+  font-family: 'Libre Baskerville', Georgia, 'Times New Roman', serif; 
+  font-weight: 700; 
+}
+
+/* Cinzel Decorative - ONLY for chapter title names */
+.title-line, .chapter-title-word, .part-title { 
+  font-family: 'Cinzel Decorative', Georgia, 'Times New Roman', serif; 
+  font-weight: 400; 
+}
+
+/* Montserrat - supporting labels and metadata */
+.author, .publisher-info, .copyright, .metadata, .toc-page-number { 
+  font-family: 'Montserrat', Arial, 'Helvetica Neue', sans-serif; 
+}
 
 /* Print fallbacks */
 @media print {
