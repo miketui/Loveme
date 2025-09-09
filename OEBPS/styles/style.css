@@ -221,15 +221,43 @@ li { margin-bottom: 0.5em; line-height: 1.5; }
    CHAPTER TITLE PAGE (ACISS layout)
    ============================= */
 .chap-title { padding: 3rem 2rem; background: var(--background-light); }
-.chapter-number-container { text-align: center; margin-bottom: 1.5rem; }
-.chapter-number-pill { display: inline-block; background: linear-gradient(45deg, #1797a6, #26a69a); border-radius: 999px; padding: 0.75rem 1.25rem; box-shadow: var(--shadow-medium); }
-.chapter-number-text { font-family: 'Cinzel Decorative', serif; font-size: 1.5rem; color: #ffffff; letter-spacing: 0.08em; }
 
+/* Roman numeral with brushstroke - TOP CENTERED */
+.chapter-number-container { text-align: center; margin-bottom: 2rem; }
+.chapter-number-brush { position: relative; display: inline-block; width: 180px; height: 120px; }
+.brushstroke-img { width: 100%; height: 100%; object-fit: cover; }
+.chapter-number-text { 
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); 
+  font-family: 'Cinzel Decorative', serif; font-size: 2.5rem; color: var(--primary-color); 
+  font-weight: bold; letter-spacing: 0.08em; z-index: 2;
+}
+
+/* Legacy support for pill style (backward compatibility) */
+.chapter-number-pill { display: inline-block; background: linear-gradient(45deg, #1797a6, #26a69a); border-radius: 999px; padding: 0.75rem 1.25rem; box-shadow: var(--shadow-medium); }
+
+/* Vertical title stack with accent bar - LEFT ALIGNED */
+.chapter-title-container { margin: 2rem 0; }
+.title-stack { display: flex; align-items: flex-start; gap: 1.5rem; }
+.title-bar { width: 4px; background: var(--accent-color); min-height: 200px; flex-shrink: 0; }
+.title-lines { display: flex; flex-direction: column; gap: 0.25rem; }
+.title-line { 
+  font-size: 2rem; color: var(--accent-color); font-weight: 700; 
+  text-transform: uppercase; letter-spacing: 0.02em; line-height: 1.1; 
+  text-align: left; margin: 0;
+}
+
+/* Legacy support (backward compatibility) */
 .chapter-title-stack { display: flex; align-items: flex-start; gap: 1.5rem; margin: 2rem 0; }
 .chapter-title-vertical { border-left: 4px solid var(--accent-color); padding-left: 1.5rem; display: flex; flex-direction: column; gap: 0.25rem; }
 .chapter-title-word { font-size: 2rem; color: var(--accent-color); font-weight: 700; text-transform: uppercase; letter-spacing: 0.02em; line-height: 1.1; text-align: left; }
 
-.bible-quote-container { background: var(--bible-quote-bg); border: 2px solid var(--accent-color); border-radius: 8px; padding: 1.25rem 1.5rem; margin: 1.75rem auto; max-width: 85%; text-align: center; font-style: italic; color: var(--secondary-color); box-shadow: var(--shadow-light); }
+/* Bible quote in pill container - CENTERED */
+.bible-quote-container { 
+  background: var(--bible-quote-bg); border: 2px solid var(--accent-color); 
+  border-radius: 25px; padding: 1.5rem 2rem; margin: 2rem auto; 
+  max-width: 85%; text-align: center; font-style: italic; 
+  color: var(--secondary-color); box-shadow: var(--shadow-light); 
+}
 .bible-quote-text { font-size: 1.05rem; margin-bottom: 0.3rem; }
 .bible-quote-reference { font-size: 0.9rem; color: var(--text-muted); font-weight: 700; font-style: normal; }
 .introduction-heading { font-size: 1rem; text-align: center; margin: 1.5rem 0 0.75rem 0; color: var(--primary-color); text-transform: uppercase; letter-spacing: 0.05em; }
@@ -245,39 +273,60 @@ figure.align-center { margin: 1.5rem auto; max-width: 80%; }
 figcaption { font-size: 0.9rem; color: var(--text-muted); font-style: italic; margin-top: 0.5rem; text-align: center; }
 img { max-width: 100%; height: auto; border-radius: 4px; box-shadow: var(--shadow-light); }
 
-/* Endnotes */
+/* =============================
+   ENDNOTES SECTION (Page 5)
+   ============================= */
 .endnotes { margin-top: 3rem; padding-top: 2rem; border-top: 2px solid var(--border-color); }
-.endnotes-title { font-size: 1.25rem; margin-bottom: 1rem; color: var(--accent-color); }
+.endnotes-title { font-size: 1.25rem; margin-bottom: 1rem; color: var(--accent-color); text-align: center; }
+.footnote { margin-bottom: 0.75rem; font-size: 0.9rem; color: var(--text-muted); position: relative; padding-left: 1.5rem; }
+.footnote-number { font-weight: bold; color: var(--accent-color); position: absolute; left: 0; }
+.footnote-text { display: inline; margin-left: 1rem; }
+
+/* Legacy support */
 .endnote { margin-bottom: 0.75rem; font-size: 0.9rem; color: var(--text-muted); position: relative; padding-left: 1.5rem; }
 .endnote::before { content: ""; background-image: url('../images/endnote-marker.PNG'); background-size: 0.8rem 0.8rem; background-repeat: no-repeat; background-position: center; width: 0.8rem; height: 0.8rem; position: absolute; left: 0; top: 0.3rem; display: block; }
 .endnote-number { font-weight: bold; color: var(--accent-color); }
 
 /* =============================
-   QUIZ (static, single page)
+   QUIZ SECTION (Page 6)
    ============================= */
-.chap-quiz { padding: 2rem; background: var(--background-light); border-radius: 8px; }
+.quiz-container { padding: 2rem; background: var(--background-light); border-radius: 8px; }
 .quiz-title { text-align: center; color: var(--accent-color); margin-bottom: 1rem; font-size: 1.5rem; }
+.question-text { font-weight: 600; margin-bottom: 0.75rem; color: var(--primary-color); }
+.quiz-options { margin: 0.75rem 0 1.5rem 1rem; list-style: none; padding: 0; }
+.option { margin: 0.35rem 0; }
+.option .opt-label { font-weight: 700; color: var(--accent-color); margin-right: 0.35rem; }
+
+/* Legacy support */
+.chap-quiz { padding: 2rem; background: var(--background-light); border-radius: 8px; }
 .quiz-subtitle { text-align: center; color: var(--text-muted); margin-bottom: 1rem; }
 .quiz-instructions { text-align: center; margin-bottom: 1.5rem; }
 .quiz-questions { list-style: none; counter-reset: quiz-q; padding-left: 0; }
 .quiz-question { counter-increment: quiz-q; margin-bottom: 1.25rem; padding: 1rem; background: #fff; border: 1px solid #e0f2f1; border-radius: 8px; }
 .quiz-question::before { content: counter(quiz-q) ". "; font-weight: 700; color: var(--accent-color); margin-right: 0.25rem; }
-.quiz-options { margin: 0.75rem 0 0 1rem; list-style: none; }
 .quiz-option { margin: 0.35rem 0; }
-.quiz-option .opt-label { font-weight: 700; color: var(--accent-color); margin-right: 0.35rem; }
 
 /* =============================
-   WORKSHEET (static, single page)
+   WORKSHEET SECTION (Page 6)
    ============================= */
-.worksheet { background-color: var(--background-worksheet); padding: 2rem; border-radius: 8px; }
-.worksheet-title { text-align: center; color: var(--accent-color); margin-bottom: 1.25rem; }
+.worksheet { background-color: var(--background-worksheet); padding: 2rem; border-radius: 8px; margin-top: 2rem; }
+.worksheet-title { text-align: center; color: var(--accent-color); margin-bottom: 1.25rem; font-size: 1.5rem; }
+.worksheet-item { margin-bottom: 2rem; }
+.worksheet-prompt { font-weight: 700; margin-bottom: 0.75rem; color: var(--secondary-color); }
+.worksheet-space { min-height: 3rem; border-bottom: 1px solid var(--border-color); margin-bottom: 1rem; }
+
+/* Legacy support */
 .worksheet-section { margin-bottom: 1.5rem; }
-.worksheet-prompt { font-weight: 700; margin-bottom: 0.5rem; color: var(--secondary-color); }
 .worksheet-input { width: 100%; min-height: 4rem; padding: 0.75rem; border: 1px solid var(--border-color); border-radius: 4px; font-family: inherit; font-size: 1rem; resize: vertical; background: #fff; }
 
 /* =============================
-   IMAGE QUOTE (closing page)
+   CLOSING SECTION (Page 6 - Final)
    ============================= */
+.closing { text-align: center; padding: 2rem; min-height: 60vh; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+.closing-image-container { margin: 2rem 0; max-width: 90%; }
+.closing-image { max-width: 100%; height: auto; border-radius: 8px; box-shadow: var(--shadow-medium); }
+
+/* Legacy support - IMAGE QUOTE (closing page) */
 .image-quote { text-align: center; padding: 2rem; min-height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; }
 .image-quote figure { margin: 2rem 0; max-width: 90%; }
 .image-quote img { max-width: 100%; height: auto; border-radius: 8px; box-shadow: var(--shadow-medium); }
